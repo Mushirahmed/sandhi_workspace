@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='ASCII'?>
 <flow_graph>
-  <timestamp>Tue Nov 18 11:03:20 2014</timestamp>
+  <timestamp>Wed Nov 19 14:06:03 2014</timestamp>
   <block>
     <key>options</key>
     <param>
@@ -84,41 +84,6 @@
     </param>
   </block>
   <block>
-    <key>tf_ztransform</key>
-    <param>
-      <key>id</key>
-      <value>tf_ztransform_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>f32_f32</value>
-    </param>
-    <param>
-      <key>num</key>
-      <value>"0.06 0.4"</value>
-    </param>
-    <param>
-      <key>den</key>
-      <value>"1 -1.6 0.78"</value>
-    </param>
-    <param>
-      <key>window</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(526, 153)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
     <key>step_offset</key>
     <param>
       <key>id</key>
@@ -154,7 +119,38 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(263, 145)</value>
+      <value>(227, 140)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>step_step</key>
+    <param>
+      <key>id</key>
+      <value>step_step_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>g</key>
+      <value>12</value>
+    </param>
+    <param>
+      <key>a</key>
+      <value>3</value>
+    </param>
+    <param>
+      <key>b</key>
+      <value>2</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(516, 167)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -193,7 +189,7 @@
     </param>
     <param>
       <key>zoom</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>grid_pos</key>
@@ -205,7 +201,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(832, 146)</value>
+      <value>(770, 145)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -214,12 +210,12 @@
   </block>
   <connection>
     <source_block_id>step_offset_0</source_block_id>
-    <sink_block_id>tf_ztransform_0</sink_block_id>
+    <sink_block_id>step_step_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>tf_ztransform_0</source_block_id>
+    <source_block_id>step_step_0</source_block_id>
     <sink_block_id>plot_sink_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>

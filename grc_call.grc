@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='ASCII'?>
 <flow_graph>
-  <timestamp>Fri Sep 26 15:15:51 2014</timestamp>
+  <timestamp>Mon Dec  1 16:49:49 2014</timestamp>
   <block>
     <key>options</key>
     <param>
@@ -170,7 +170,7 @@
     </param>
     <param>
       <key>file</key>
-      <value>/home/mushirahmed/FOSSEE_LAPTOP_BACKUP/sandhi_workspace/power_cc.grc</value>
+      <value>/home/mushirahmed/FOSSEE_LAPTOP_BACKUP/sandhi_workspace/B.grc</value>
     </param>
     <param>
       <key>window</key>
@@ -178,7 +178,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(343, 157)</value>
+      <value>(298, 155)</value>
     </param>
     <param>
       <key>_rotation</key>

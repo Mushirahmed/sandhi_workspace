@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='ASCII'?>
 <flow_graph>
-  <timestamp>Mon Dec 22 14:48:20 2014</timestamp>
+  <timestamp>Wed Jan  7 12:21:08 2015</timestamp>
   <block>
     <key>options</key>
     <param>
@@ -84,10 +84,10 @@
     </param>
   </block>
   <block>
-    <key>gr_null_source</key>
+    <key>gr_add_const_vxx</key>
     <param>
       <key>id</key>
-      <value>gr_null_source_0</value>
+      <value>gr_add_const_vxx_0</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -98,12 +98,16 @@
       <value>float</value>
     </param>
     <param>
+      <key>const</key>
+      <value>20</value>
+    </param>
+    <param>
       <key>vlen</key>
       <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(152, 204)</value>
+      <value>(352, 117)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -111,10 +115,10 @@
     </param>
   </block>
   <block>
-    <key>blocks_throttle</key>
+    <key>plot_sink</key>
     <param>
       <key>id</key>
-      <value>blocks_throttle_0</value>
+      <value>plot_sink_2</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -125,16 +129,63 @@
       <value>float</value>
     </param>
     <param>
-      <key>samples_per_second</key>
-      <value>samp_rate</value>
+      <key>title</key>
+      <value>Heat Values</value>
+    </param>
+    <param>
+      <key>decim</key>
+      <value>1</value>
     </param>
     <param>
       <key>vlen</key>
       <value>1</value>
     </param>
     <param>
+      <key>grid_pos</key>
+      <value>0,0,1,1</value>
+    </param>
+    <param>
+      <key>notebook</key>
+      <value></value>
+    </param>
+    <param>
       <key>_coordinate</key>
-      <value>(671, 201)</value>
+      <value>(948, 166)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>sbfan</key>
+    <param>
+      <key>id</key>
+      <value>sbfan_1</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>f32_f32</value>
+    </param>
+    <param>
+      <key>fan_val</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>window</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(554, 42)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -157,7 +208,7 @@
     </param>
     <param>
       <key>title</key>
-      <value>Scope Plot</value>
+      <value>Temperature</value>
     </param>
     <param>
       <key>decim</key>
@@ -168,16 +219,8 @@
       <value>1</value>
     </param>
     <param>
-      <key>gsz</key>
-      <value>50</value>
-    </param>
-    <param>
-      <key>zoom</key>
-      <value>0</value>
-    </param>
-    <param>
       <key>grid_pos</key>
-      <value></value>
+      <value>0,1,1,1</value>
     </param>
     <param>
       <key>notebook</key>
@@ -185,7 +228,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(901, 183)</value>
+      <value>(948, 80)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -193,10 +236,10 @@
     </param>
   </block>
   <block>
-    <key>scifile_generic</key>
+    <key>const_source_x</key>
     <param>
       <key>id</key>
-      <value>scifile_generic_0</value>
+      <value>const_source_x_0</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -204,14 +247,41 @@
     </param>
     <param>
       <key>type</key>
-      <value>f32_f32</value>
+      <value>float</value>
     </param>
     <param>
-      <key>path</key>
-      <value>/home/mushirahmed/scilab_workspace/LHY_Model/model/LHY_MainConsole.sce</value>
+      <key>const</key>
+      <value>30</value>
     </param>
     <param>
-      <key>num_inputs</key>
+      <key>_coordinate</key>
+      <value>(174, 11)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>plot_sink</key>
+    <param>
+      <key>id</key>
+      <value>plot_sink_1</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>title</key>
+      <value>Fan Values</value>
+    </param>
+    <param>
+      <key>decim</key>
       <value>1</value>
     </param>
     <param>
@@ -219,12 +289,59 @@
       <value>1</value>
     </param>
     <param>
-      <key>window</key>
-      <value>1</value>
+      <key>grid_pos</key>
+      <value>1,0,1,1</value>
+    </param>
+    <param>
+      <key>notebook</key>
+      <value></value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(402, 193)</value>
+      <value>(963, 0)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>gr_sig_source_x</key>
+    <param>
+      <key>id</key>
+      <value>gr_sig_source_x_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>waveform</key>
+      <value>gr.GR_SIN_WAVE</value>
+    </param>
+    <param>
+      <key>freq</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>amp</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>offset</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(110, 77)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -232,20 +349,38 @@
     </param>
   </block>
   <connection>
-    <source_block_id>gr_null_source_0</source_block_id>
-    <sink_block_id>scifile_generic_0</sink_block_id>
+    <source_block_id>gr_sig_source_x_0</source_block_id>
+    <sink_block_id>gr_add_const_vxx_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>scifile_generic_0</source_block_id>
-    <sink_block_id>blocks_throttle_0</sink_block_id>
+    <source_block_id>gr_add_const_vxx_0</source_block_id>
+    <sink_block_id>sbfan_1</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>1</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>const_source_x_0</source_block_id>
+    <sink_block_id>sbfan_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>blocks_throttle_0</source_block_id>
+    <source_block_id>gr_add_const_vxx_0</source_block_id>
+    <sink_block_id>plot_sink_2</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>sbfan_1</source_block_id>
     <sink_block_id>plot_sink_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>const_source_x_0</source_block_id>
+    <sink_block_id>plot_sink_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>

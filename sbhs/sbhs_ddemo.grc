@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='ASCII'?>
 <flow_graph>
-  <timestamp>Mon Dec 22 14:48:20 2014</timestamp>
+  <timestamp>Fri Dec 26 16:28:02 2014</timestamp>
   <block>
     <key>options</key>
     <param>
@@ -76,7 +76,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(10, 170)</value>
+      <value>(18, 95)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -84,10 +84,10 @@
     </param>
   </block>
   <block>
-    <key>gr_null_source</key>
+    <key>const_source_x</key>
     <param>
       <key>id</key>
-      <value>gr_null_source_0</value>
+      <value>const_source_x_1</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -98,12 +98,12 @@
       <value>float</value>
     </param>
     <param>
-      <key>vlen</key>
-      <value>1</value>
+      <key>const</key>
+      <value>variable_slider_1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(152, 204)</value>
+      <value>(203, 198)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -111,10 +111,10 @@
     </param>
   </block>
   <block>
-    <key>blocks_throttle</key>
+    <key>const_source_x</key>
     <param>
       <key>id</key>
-      <value>blocks_throttle_0</value>
+      <value>const_source_x_0</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -125,16 +125,12 @@
       <value>float</value>
     </param>
     <param>
-      <key>samples_per_second</key>
-      <value>samp_rate</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
+      <key>const</key>
+      <value>variable_slider_0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(671, 201)</value>
+      <value>(209, 133)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -173,7 +169,7 @@
     </param>
     <param>
       <key>zoom</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>grid_pos</key>
@@ -185,7 +181,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(901, 183)</value>
+      <value>(875, 138)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -193,10 +189,10 @@
     </param>
   </block>
   <block>
-    <key>scifile_generic</key>
+    <key>sbfan</key>
     <param>
       <key>id</key>
-      <value>scifile_generic_0</value>
+      <value>sbfan_1</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -207,12 +203,12 @@
       <value>f32_f32</value>
     </param>
     <param>
-      <key>path</key>
-      <value>/home/mushirahmed/scilab_workspace/LHY_Model/model/LHY_MainConsole.sce</value>
+      <key>fan_val</key>
+      <value>20</value>
     </param>
     <param>
-      <key>num_inputs</key>
-      <value>1</value>
+      <key>heat_val</key>
+      <value>20</value>
     </param>
     <param>
       <key>vlen</key>
@@ -224,7 +220,117 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(402, 193)</value>
+      <value>(648, 146)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_slider</key>
+    <param>
+      <key>id</key>
+      <value>variable_slider_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value></value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>30</value>
+    </param>
+    <param>
+      <key>min</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>max</key>
+      <value>100</value>
+    </param>
+    <param>
+      <key>num_steps</key>
+      <value>100</value>
+    </param>
+    <param>
+      <key>style</key>
+      <value>wx.SL_HORIZONTAL</value>
+    </param>
+    <param>
+      <key>converver</key>
+      <value>float_converter</value>
+    </param>
+    <param>
+      <key>grid_pos</key>
+      <value></value>
+    </param>
+    <param>
+      <key>notebook</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(216, 6)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_slider</key>
+    <param>
+      <key>id</key>
+      <value>variable_slider_1</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value></value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>40</value>
+    </param>
+    <param>
+      <key>min</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>max</key>
+      <value>100</value>
+    </param>
+    <param>
+      <key>num_steps</key>
+      <value>100</value>
+    </param>
+    <param>
+      <key>style</key>
+      <value>wx.SL_HORIZONTAL</value>
+    </param>
+    <param>
+      <key>converver</key>
+      <value>float_converter</value>
+    </param>
+    <param>
+      <key>grid_pos</key>
+      <value></value>
+    </param>
+    <param>
+      <key>notebook</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(233, 255)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -232,20 +338,20 @@
     </param>
   </block>
   <connection>
-    <source_block_id>gr_null_source_0</source_block_id>
-    <sink_block_id>scifile_generic_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>scifile_generic_0</source_block_id>
-    <sink_block_id>blocks_throttle_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_throttle_0</source_block_id>
+    <source_block_id>sbfan_1</source_block_id>
     <sink_block_id>plot_sink_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>const_source_x_1</source_block_id>
+    <sink_block_id>sbfan_1</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>1</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>const_source_x_0</source_block_id>
+    <sink_block_id>sbfan_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>

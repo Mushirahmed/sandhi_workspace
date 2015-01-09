@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='ASCII'?>
 <flow_graph>
-  <timestamp>Wed Nov  5 11:24:30 2014</timestamp>
+  <timestamp>Thu Dec 11 15:54:21 2014</timestamp>
   <block>
     <key>options</key>
     <param>
@@ -72,11 +72,46 @@
     </param>
     <param>
       <key>value</key>
-      <value>3200</value>
+      <value>32000</value>
     </param>
     <param>
       <key>_coordinate</key>
       <value>(10, 170)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>exp_expo</key>
+    <param>
+      <key>id</key>
+      <value>exp_expo_1</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>g</key>
+      <value>12</value>
+    </param>
+    <param>
+      <key>a</key>
+      <value>3</value>
+    </param>
+    <param>
+      <key>b</key>
+      <value>2</value>
+    </param>
+    <param>
+      <key>w</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(533, 143)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -110,6 +145,14 @@
       <value>1</value>
     </param>
     <param>
+      <key>gsz</key>
+      <value>50</value>
+    </param>
+    <param>
+      <key>zoom</key>
+      <value>1</value>
+    </param>
+    <param>
       <key>grid_pos</key>
       <value></value>
     </param>
@@ -119,7 +162,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(807, 170)</value>
+      <value>(742, 135)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -158,42 +201,11 @@
     </param>
     <param>
       <key>W_Off</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(225, 156)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
       <value>0</value>
     </param>
-  </block>
-  <block>
-    <key>exp_expo</key>
-    <param>
-      <key>id</key>
-      <value>exp_expo_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>g</key>
-      <value>6</value>
-    </param>
-    <param>
-      <key>a</key>
-      <value>5</value>
-    </param>
-    <param>
-      <key>b</key>
-      <value>10</value>
-    </param>
     <param>
       <key>_coordinate</key>
-      <value>(538, 171)</value>
+      <value>(292, 135)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -201,14 +213,14 @@
     </param>
   </block>
   <connection>
-    <source_block_id>step_offset_0</source_block_id>
-    <sink_block_id>exp_expo_0</sink_block_id>
+    <source_block_id>exp_expo_1</source_block_id>
+    <sink_block_id>plot_sink_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>exp_expo_0</source_block_id>
-    <sink_block_id>plot_sink_0</sink_block_id>
+    <source_block_id>step_offset_0</source_block_id>
+    <sink_block_id>exp_expo_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>

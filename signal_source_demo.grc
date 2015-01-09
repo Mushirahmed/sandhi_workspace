@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='ASCII'?>
 <flow_graph>
-  <timestamp>Tue Nov 18 11:03:20 2014</timestamp>
+  <timestamp>Wed Jan  7 12:31:37 2015</timestamp>
   <block>
     <key>options</key>
     <param>
@@ -84,84 +84,6 @@
     </param>
   </block>
   <block>
-    <key>tf_ztransform</key>
-    <param>
-      <key>id</key>
-      <value>tf_ztransform_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>f32_f32</value>
-    </param>
-    <param>
-      <key>num</key>
-      <value>"0.06 0.4"</value>
-    </param>
-    <param>
-      <key>den</key>
-      <value>"1 -1.6 0.78"</value>
-    </param>
-    <param>
-      <key>window</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(526, 153)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>step_offset</key>
-    <param>
-      <key>id</key>
-      <value>step_offset_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>f32_f32</value>
-    </param>
-    <param>
-      <key>num_inputs</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>S</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>H_Off</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>W_Off</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(263, 145)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
     <key>plot_sink</key>
     <param>
       <key>id</key>
@@ -188,14 +110,6 @@
       <value>1</value>
     </param>
     <param>
-      <key>gsz</key>
-      <value>50</value>
-    </param>
-    <param>
-      <key>zoom</key>
-      <value>0</value>
-    </param>
-    <param>
       <key>grid_pos</key>
       <value></value>
     </param>
@@ -205,7 +119,50 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(832, 146)</value>
+      <value>(795, 191)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>gr_sig_source_x</key>
+    <param>
+      <key>id</key>
+      <value>gr_sig_source_x_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>waveform</key>
+      <value>gr.GR_SIN_WAVE</value>
+    </param>
+    <param>
+      <key>freq</key>
+      <value>3</value>
+    </param>
+    <param>
+      <key>amp</key>
+      <value>2</value>
+    </param>
+    <param>
+      <key>offset</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(296, 167)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -213,13 +170,7 @@
     </param>
   </block>
   <connection>
-    <source_block_id>step_offset_0</source_block_id>
-    <sink_block_id>tf_ztransform_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>tf_ztransform_0</source_block_id>
+    <source_block_id>gr_sig_source_x_0</source_block_id>
     <sink_block_id>plot_sink_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>

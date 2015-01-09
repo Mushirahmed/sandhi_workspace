@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='ASCII'?>
 <flow_graph>
-  <timestamp>Tue Nov 18 11:03:20 2014</timestamp>
+  <timestamp>Fri Dec 19 08:48:55 2014</timestamp>
   <block>
     <key>options</key>
     <param>
@@ -84,10 +84,10 @@
     </param>
   </block>
   <block>
-    <key>tf_ztransform</key>
+    <key>gr_null_source</key>
     <param>
       <key>id</key>
-      <value>tf_ztransform_0</value>
+      <value>gr_null_source_0</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -95,66 +95,15 @@
     </param>
     <param>
       <key>type</key>
-      <value>f32_f32</value>
-    </param>
-    <param>
-      <key>num</key>
-      <value>"0.06 0.4"</value>
-    </param>
-    <param>
-      <key>den</key>
-      <value>"1 -1.6 0.78"</value>
-    </param>
-    <param>
-      <key>window</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(526, 153)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>step_offset</key>
-    <param>
-      <key>id</key>
-      <value>step_offset_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>f32_f32</value>
-    </param>
-    <param>
-      <key>num_inputs</key>
-      <value>1</value>
+      <value>float</value>
     </param>
     <param>
       <key>vlen</key>
       <value>1</value>
     </param>
     <param>
-      <key>S</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>H_Off</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>W_Off</key>
-      <value>0</value>
-    </param>
-    <param>
       <key>_coordinate</key>
-      <value>(263, 145)</value>
+      <value>(304, 182)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -162,10 +111,41 @@
     </param>
   </block>
   <block>
-    <key>plot_sink</key>
+    <key>sci_python_sci_py</key>
     <param>
       <key>id</key>
-      <value>plot_sink_0</value>
+      <value>sci_python_sci_py_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>path</key>
+      <value>/home/mushirahmed/python_workspace/Sandhi/Sandhi_Intership_Work/Sandhi-CustomBlocks/gr-scigen/python/test.sci</value>
+    </param>
+    <param>
+      <key>window</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>var_name</key>
+      <value>"y"</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(522, 172)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>wxgui_scopesink2</key>
+    <param>
+      <key>id</key>
+      <value>wxgui_scopesink2_0</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -180,20 +160,36 @@
       <value>Scope Plot</value>
     </param>
     <param>
-      <key>decim</key>
-      <value>1</value>
+      <key>samp_rate</key>
+      <value>samp_rate</value>
     </param>
     <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>gsz</key>
-      <value>50</value>
-    </param>
-    <param>
-      <key>zoom</key>
+      <key>v_scale</key>
       <value>0</value>
+    </param>
+    <param>
+      <key>v_offset</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>t_scale</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>ac_couple</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>xy_mode</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>num_inputs</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>win_size</key>
+      <value></value>
     </param>
     <param>
       <key>grid_pos</key>
@@ -204,8 +200,16 @@
       <value></value>
     </param>
     <param>
+      <key>trig_mode</key>
+      <value>gr.gr_TRIG_MODE_AUTO</value>
+    </param>
+    <param>
+      <key>y_axis_label</key>
+      <value>Counts</value>
+    </param>
+    <param>
       <key>_coordinate</key>
-      <value>(832, 146)</value>
+      <value>(827, 168)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -213,14 +217,14 @@
     </param>
   </block>
   <connection>
-    <source_block_id>step_offset_0</source_block_id>
-    <sink_block_id>tf_ztransform_0</sink_block_id>
+    <source_block_id>gr_null_source_0</source_block_id>
+    <sink_block_id>sci_python_sci_py_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>tf_ztransform_0</source_block_id>
-    <sink_block_id>plot_sink_0</sink_block_id>
+    <source_block_id>sci_python_sci_py_0</source_block_id>
+    <sink_block_id>wxgui_scopesink2_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
